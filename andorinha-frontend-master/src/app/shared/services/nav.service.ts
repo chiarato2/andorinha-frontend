@@ -45,6 +45,18 @@ export class NavService {
 	},
 	{
 	  title: 'Cadastro de usuários', path: '/usuario-detalhe', icon: 'anchor', type: 'link', badgeType: 'primary'
+	},
+	{
+		title: 'Tweetar', path: '/tweet-detalhe', icon: 'ancor', type: 'link', badgeType: 'primary'
+	},
+	{
+		title: 'Listar Tweets', path: '/tweet-lista', icon: 'ancor', type: 'link', badgeType: 'primary'
+	},
+	{
+		title: 'Comentar', path: '/comentario-detalhe', icon: 'ancor', type: 'link', badgeType: 'primary'
+	},
+	{
+		title: 'Listar Comentarios', path: '/comentario-lista', icon: 'ancor', type: 'link', badgeType: 'primary'
 	}
     ];
 

@@ -8,6 +8,8 @@ import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './modules/home/home.module';
 import { UsuarioModule } from './modules/usuario/usuario.module';
 import { SampleModule } from './components/sample/sample.module';
+import { TweetModule } from './modules/tweet/tweet.module';
+import { ComentarioModule } from './modules/comentario/comentario.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { SampleModule } from './components/sample/sample.module';
     SharedModule,
     HomeModule,
     UsuarioModule,
-    SampleModule
+    SampleModule,
+    TweetModule,
+    ComentarioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

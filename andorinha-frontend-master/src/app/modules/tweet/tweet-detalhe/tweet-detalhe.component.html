@@ -1,0 +1,26 @@
+<form>
+    <div class="container-fluid">
+        <div class="page-header">
+          <div class="row">
+            <div class="col-lg-6">
+              <h3>Pagina de Tweets
+                <small>Sample-Text-Here</small></h3>
+            </div>
+            <div class="col-lg-6">
+              <ol class="breadcrumb pull-right">
+                <li class="breadcrumb-item"><a [routerLink]="'/home'"><i class="fa fa-home"></i></a>
+                </li>
+                <li class="breadcrumb-item active">Tweetar</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class = "form-grupo">
+        <label>Seu Tweet:</label>
+        <input type="text" name="tweet" class="form-control" placeholder="Tweet alguma coisa">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Tweetar</button>
+</form>
