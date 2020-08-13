@@ -1,41 +1,150 @@
 <div class="container-fluid">
-    <div class="page-header">
-      <div class="row">
-        <div class="col-lg-6">
-          <h3>Listagem de Tweets
-            <small>Texto adicional caso precise</small></h3>
-        </div>
-        <div class="col-lg-6">
-          <ol class="breadcrumb pull-right">
-            <li class="breadcrumb-item"><a [routerLink]="'/home'"><i class="fa fa-home"></i></a>
-            </li>
-            <li class="breadcrumb-item active">Tweets</li>
-          </ol>
-        </div>
+  <div class="page-header">
+    <div class="row">
+      <div class="col-lg-6">
+        <h3>Seu Perfil<small>Veja todos os seus tweets aqui!(listar tweets)</small></h3>
+      </div>
+      <div class="col-lg-6">
+        <ol class="breadcrumb pull-right">
+          <li class="breadcrumb-item"><a [routerLink]="'/home'"><i class="fa fa-home"></i></a>
+          </li>
+          <li class="breadcrumb-item active">Tweets</li>
+        </ol>
       </div>
     </div>
   </div>
+</div>
 
-  <div class="container-fluid">
+<div class="container-fluid">
+  <div class="user-profile">
     <div class="row">
       <div class="col-sm-12">
-        <div class="card">
-          <div class="card-body">
-          <div class="table-responsive">
-          <table class="table table-sm">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Nome do Usuário</th>
-                <th scope="col">Conteudo</th>
-                <th scope="col">Data de Postagem</th>
-              </tr>
-            </thead>
-          </table>
+        <!--Cabeçalho-->
+        <div class="card hovercard text-center">
+          <div class="cardheader"></div>
+          <div class="user-image">
+            <div class="avatar">
+              <img alt="" src="assets/images/user/11.png">
+            </div>
+          </div>
+          <div class="info">
+            <div _ngcontent-sif-c50="" class="text-center profile-details">
+              <h4 _ngcontent-sif-c50="">Usuario</h4>
+              <h6 _ngcontent-sif-c50="">@user</h6>
           </div>
           </div>
         </div>
+        <!--Fim Cabeçalho-->
+        <!--Listagem de Tweets-->
+        <div class="col-sm-12">
+          <div class="card">
+            <div class="profile-img-style">
+              <div class="row">
+                <div class="col-sm-8">
+                  <div class="media">
+                    <img alt="Generic placeholder image" class="img-thumbnail rounded-circle mr-3" src="assets/images/user/11.png">
+                    <div class="media-body align-self-center">
+                      <h5 class="mt-0 user-name">Usuario</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4 align-self-center">
+                  <div class="float-sm-right"><small>Data Postagem</small>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <p>Conteudo do seu tweet aqui</p>
+              <div class="like-comment mt-4">
+                <ul class="list-inline">
+                  <li class="list-inline-item ml-2">
+                    <label class="m-0"><a href="javascript:void(0)"><i class="fa fa-comment"></i>&nbsp;&nbsp;Comentarios</a></label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-12">
+          <div class="card">
+            <div class="profile-img-style">
+              <div class="row">
+                <div class="col-sm-8">
+                  <div class="media">
+                    <img alt="Generic placeholder image" class="img-thumbnail rounded-circle mr-3" src="assets/images/user/11.png">
+                    <div class="media-body align-self-center">
+                      <h5 class="mt-0 user-name">Usuario</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4 align-self-center">
+                  <div class="float-sm-right"><small>Data Postagem</small>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <p>Conteudo do seu tweet 2 aqui</p>
+              <div class="like-comment mt-4">
+                <ul class="list-inline">
+                  <li class="list-inline-item ml-2">
+                    <label class="m-0"><a href="javascript:void(0)"><i class="fa fa-comment"></i>&nbsp;&nbsp;Comentarios</a></label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-12">
+          <div class="card">
+            <div class="profile-img-style">
+              <div class="row">
+                <div class="col-sm-8">
+                  <div class="media">
+                    <img alt="Generic placeholder image" class="img-thumbnail rounded-circle mr-3" src="assets/images/user/11.png">
+                    <div class="media-body align-self-center">
+                      <h5 class="mt-0 user-name">Usuario</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4 align-self-center">
+                  <div class="float-sm-right"><small>Data Postagem</small>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <p>Conteudo do seu tweet 3 aqui</p>
+              <div class="like-comment mt-4">
+                <ul class="list-inline">
+                  <li class="list-inline-item ml-2">
+                    <!--<label class="m-0"><a href="javascript:void(0)"><i class="fa fa-comment"></i>&nbsp;&nbsp;Comentarios</a></label>-->
+                    <div _ngcontent-sup-c7="" class="card-body">
+                      <p>
+                        <button type="button" class="btn btn-outline-primary" (click)="isCollapsed = !isCollapsed"
+                        [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">Toggle</button>
+                      </p>
+                    </div>
+                    <div id="collapseExample" >
+                      <div class="card mb-0">
+                        <div class="card-body">
+                          You can collapse this card by clicking Toggle
+                        </div>
+                      </div>
+                    </div>  
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Fim da Listagem de Tweets-->
       </div>
     </div>
-  </div>
-  
+  </div>        
+</div>
+
+<script src="runtime.873b5a20eac687959739.js"></script>
+<script src="polyfills-es5.27a5ef8d2249f0006f1a.js" nomodule=""></script>
+<script src="polyfills.b03830fb01e50d43bb04.js"></script>
+<script src="main.1548b4487e9877774ee3.js"></script>
