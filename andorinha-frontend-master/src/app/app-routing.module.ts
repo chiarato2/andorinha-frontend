@@ -10,7 +10,10 @@ import { ComentarioDetalheComponent } from './modules/comentario/comentario-deta
 import { ComentarioListaComponent } from './modules/comentario/comentario-lista/comentario-lista.component';
 
 const routes: Routes = [
-  {
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '', loadChildren: () => import('./modules/login/login.module').then((m) => m.LoginModule)},
+  { path: 'app', loadChildren: () => import('./shared/template/template.module').then((m) => m.TemplateModule)},
+  /* {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
@@ -36,13 +39,13 @@ const routes: Routes = [
     component: TweetDetalheComponent
   },
   {
-    path: 'comentario-detalhe',
+    path: 'comentario-detalhe/:id',
     component: ComentarioDetalheComponent 
   },
   {
     path: 'comentario-lista',
     component: ComentarioListaComponent
-  }
+  } */
 ];
 
 @NgModule({

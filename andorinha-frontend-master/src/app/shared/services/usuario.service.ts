@@ -6,37 +6,7 @@ import {UsuarioSeletor} from '../models/seletor/usuario.seletor';
 
 
 const USUARIOS = [
-  {
-    nome: 'Romário',
-    idade: 46,
-    dataNascimento: new Date()
-  },
-  {
-    nome: 'Bebeto',
-    idade: 47,
-    dataNascimento: new Date()
-  },
-  {
-    nome: 'Ronaldo',
-    idade: 48,
-    dataNascimento: new Date()
-  },
-  {
-    nome: 'Raí',
-    idade: 19,
-    dataNascimento: new Date()
-  },
-  {
-    nome: 'Zico',
-    idade: 50,
-    dataNascimento: new Date()
-  },
-  {
-    nome: 'Menino Ney',
-    idade: 20,
-    dataNascimento: new Date()
-  }
-
+  
 ];
 
 @Injectable({

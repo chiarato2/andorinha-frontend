@@ -8,7 +8,7 @@ import {CustomizerService} from './shared/services/customizer.service';
 })
 export class AppComponent implements OnInit {
 
-  public title = 'universal-starterkit';
+  /* public title = 'universal-starterkit';
   public toggle;
 
   constructor(public customize: CustomizerService) { }
@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
   receiveToggle($event) {
     this.openToggle = $event;
     this.toggle = this.openToggle;
-  }
+  } */
 
   ngOnInit() { }
 

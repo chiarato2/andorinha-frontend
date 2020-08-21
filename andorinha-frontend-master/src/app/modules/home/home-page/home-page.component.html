@@ -31,11 +31,11 @@
           <form _ngcontent-rnt-c11="" class="needs-validation ng-untouched ng-pristine ng-valid" novalidate="">
             <div _ngcontent-xrh-c8="" class="form-row">
               <div _ngcontent-rnt-c11="" class="col-md-10 mb-3">
-                <input _ngcontent-xrh-c8="" class="form-control ng-untouched ng-pristine ng-invalid" id="validationCustom01" placeholder="Digite aqui/Tweet aqui" required="" type="text">
+                <input _ngcontent-xrh-c8="" class="form-control ng-untouched ng-pristine ng-invalid" name="conteudo" [(ngModel)]="tweet.conteudo" placeholder="Digite aqui/Tweet aqui" type="text">
               </div>
             </div>
           </form>
-          <button _ngcontent-ikr-c7="" class="btn btn-primary mr-1" type="button">Tweetar</button>  
+          <button _ngcontent-ikr-c7="" class="btn btn-primary mr-1" type="button" (click)="tweetar()">Tweetar</button> 
         </div>
       </div>
         <!-- Fim do Usuario header-->
@@ -44,43 +44,16 @@
         <hr _ngcontent-ikr-c16="">
 
         <!-- Feed de noticias -->
-        <div _ngcontent-xrh-c8="" class="card">
-          <div _ngcontent-xrh-c8="" class="card-header">
-            <div _ngcontent-emg-c16="" class="row mb-2">
-                <div _ngcontent-emg-c16="" class="col-auto">
-                  <img _ngcontent-emg-c16="" alt="" class="img-70 rounded-circle" src="assets/images/user/11.png">
-                </div>
-                <div _ngcontent-emg-c16="" class="col">
-                  <h4 _ngcontent-emg-c16="" class="mb-1 ">Usuario 1</h4>
-                  <p _ngcontent-emg-c16="" class="mb-4 ">@user1</p>
-                </div>
-            </div>
-          </div>
-          <div _ngcontent-xrh-c8="" class="card-body">
-            <form _ngcontent-rnt-c11="" class="needs-validation ng-untouched ng-pristine ng-valid" novalidate="">
-              <div _ngcontent-xrh-c8="" class="form-row">
-                <div _ngcontent-rnt-c11="" class="col-md-10 mb-3">
-                  <h3>Tweet do usuario 1</h3>
-                  <span _ngcontent-sif-c52="" class="pull-right f-14">Data Postagem</span>
-                </div>
-              </div>
-            </form>
-            <hr>
-            <button _ngcontent-ikr-c7="" class="btn btn-primary mr-1" type="button" onclick="alert('teste')">Comentar</button>
-            <button _ngcontent-ikr-c7="" class="btn btn-primary mr-1" type="button">Curtir</button>
-            <button _ngcontent-ikr-c7="" class="btn btn-primary mr-1" type="button">Compartilhar</button>  
-          </div>
-        </div>
 
-        <div _ngcontent-xrh-c8="" class="card">
+        <div _ngcontent-xrh-c8="" class="card" *ngFor = "let tweet of tweets">
           <div _ngcontent-xrh-c8="" class="card-header">
             <div _ngcontent-emg-c16="" class="row mb-2">
                 <div _ngcontent-emg-c16="" class="col-auto">
                   <img _ngcontent-emg-c16="" alt="" class="img-70 rounded-circle" src="assets/images/user/11.png">
                 </div>
                 <div _ngcontent-emg-c16="" class="col">
-                  <h4 _ngcontent-emg-c16="" class="mb-1 ">Usuario 2</h4>
-                  <p _ngcontent-emg-c16="" class="mb-4 ">@user2</p>
+                  <h4 _ngcontent-emg-c16="" class="mb-1 ">{{tweet.usuario.nome}}</h4>
+                  <p _ngcontent-emg-c16="" class="mb-4 ">@user</p>
                 </div>
             </div>
           </div>
@@ -88,43 +61,16 @@
             <form _ngcontent-rnt-c11="" class="needs-validation ng-untouched ng-pristine ng-valid" novalidate="">
               <div _ngcontent-xrh-c8="" class="form-row">
                 <div _ngcontent-rnt-c11="" class="col-md-10 mb-3">
-                  <h3>Tweet do usuario 2</h3>
-                  <span _ngcontent-sif-c52="" class="pull-right f-14">Data Postagem</span>
+                  <h3>{{tweet.conteudo}}<span _ngcontent-oed-c15="" class="pull-right f-14">{{tweet.data | date: 'dd/MM/yyyy HH:mm' }}</span></h3>
                 </div>
               </div>
             </form>
             <hr>
-            <button _ngcontent-ikr-c7="" class="btn btn-primary mr-1" type="button">Comentar</button>
-            <button _ngcontent-ikr-c7="" class="btn btn-primary mr-1" type="button">Curtir</button>
-            <button _ngcontent-ikr-c7="" class="btn btn-primary mr-1" type="button">Compartilhar</button>  
-          </div>
-        </div>
-
-        <div _ngcontent-xrh-c8="" class="card">
-          <div _ngcontent-xrh-c8="" class="card-header">
-            <div _ngcontent-emg-c16="" class="row mb-2">
-                <div _ngcontent-emg-c16="" class="col-auto">
-                  <img _ngcontent-emg-c16="" alt="" class="img-70 rounded-circle" src="assets/images/user/11.png">
-                </div>
-                <div _ngcontent-emg-c16="" class="col">
-                  <h4 _ngcontent-emg-c16="" class="mb-1 ">Usuario 3</h4>
-                  <p _ngcontent-emg-c16="" class="mb-4 ">@user3</p>
-                </div>
-            </div>
-          </div>
-          <div _ngcontent-xrh-c8="" class="card-body">
-            <form _ngcontent-rnt-c11="" class="needs-validation ng-untouched ng-pristine ng-valid" novalidate="">
-              <div _ngcontent-xrh-c8="" class="form-row">
-                <div _ngcontent-rnt-c11="" class="col-md-10 mb-3">
-                  <h3>Tweet do usuario 3</h3>
-                  <span _ngcontent-sif-c52="" class="pull-right f-14">Data Postagem</span>
-                </div>
-              </div>
-            </form>
-            <hr>
-            <button _ngcontent-ikr-c7="" class="btn btn-primary mr-1" type="button">Comentar</button>
-            <button _ngcontent-ikr-c7="" class="btn btn-primary mr-1" type="button">Curtir</button>
-            <button _ngcontent-ikr-c7="" class="btn btn-primary mr-1" type="button">Compartilhar</button>  
+            <p _ngcontent-uqk-c7="">
+              <button _ngcontent-ikr-c7="" class="btn btn-primary mr-1" type="button">Curtir</button>
+              <button _ngcontent-ikr-c7="" class="btn btn-primary mr-1" type="button">Compartilhar</button> 
+              <button _ngcontent-ikr-c7="" class="btn btn-primary mr-1" type="button" routerLink="/comentario-detalhe/{{tweet.id}}">Comentar</button>
+            </p>
           </div>
         </div>
         <!-- Fim do Feed de noticias -->
@@ -133,10 +79,3 @@
   </div>
 </div>
 <!-- Fim do Feed -->
-
-<!--Script Botao-->
-<script>
-  function comentar() {
-  alert("I am an alert box!");
-}
-</script>

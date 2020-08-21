@@ -1,26 +1,59 @@
-<form>
-    <div class="container-fluid">
-        <div class="page-header">
-          <div class="row">
-            <div class="col-lg-6">
-              <h3>Pagina de Comentarios
-                <small>Sample-Text-Here</small></h3>
+<div class="container-fluid">
+  <div class="page-header">
+    <div class="row">
+      <div class="col-lg-6">
+        <h3>Tweet
+          <small>Aqui vai o count(comentarios)</small>
+        </h3>
+      </div>
+      <div class="col-lg-6">
+        <ol class="breadcrumb pull-right">
+          <li class="breadcrumb-item"><i class="fa fa-home"></i>
+          </li>
+          <li class="breadcrumb-item">Início</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+      
+    <div class="col-md-12">
+      <div class="card tweet-card">
+          
+          <div class="card-header tweet-header" >
+            <div>
+              <span class="tweet-name">{{tweet.usuario.nome}}</span>
+              <span class="mr-3 ml-3">.</span>
+              <span class="message-data-time">{{tweet.data | date: 'dd/MM/yyyy HH:mm' }}</span>
             </div>
-            <div class="col-lg-6">
-              <ol class="breadcrumb pull-right">
-                <li class="breadcrumb-item"><a [routerLink]="'/home'"><i class="fa fa-home"></i></a>
-                </li>
-                <li class="breadcrumb-item active">Comentar</li>
-              </ol>
+            <div class="card-body">
+              <h2><p class="mb-0"> {{tweet.conteudo}} </p></h2>
             </div>
           </div>
+
+          <div _ngcontent-oed-c11="" class="card-footer tweet-footer">
+            <div _ngcontent-oed-c11="" class="card-body">
+                <div _ngcontent-oed-c11="" class="timeline-small">
+                  
+                  <div _ngcontent-oed-c11="" class="media" *ngFor = "let comentario of comentarios">
+                    <div _ngcontent-oed-c11="" class="timeline-round m-r-30 timeline-line-1 bg-primary">
+                      <i class="fa fa-comment-o"></i>
+                    </div>
+                    <div _ngcontent-oed-c11="" class="media-body">
+                      <h6 _ngcontent-oed-c11="">{{comentario.usuario.nome}}<span _ngcontent-oed-c11="" class="pull-right f-14">{{comentario.data | date: 'dd/MM/yyyy HH:mm' }}</span></h6>
+                      <p _ngcontent-oed-c11="">{{comentario.conteudo}}</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+          </div>
+
         </div>
     </div>
 
-    <div class = "form-grupo">
-        <label>Seu Comentario:</label>
-        <input type="text" name="tweet" class="form-control" placeholder="Tweet alguma coisa">
-    </div>
-
-    <button type="submit" class="btn btn-primary">Comentar</button>
-</form>
+  </div>
+</div>

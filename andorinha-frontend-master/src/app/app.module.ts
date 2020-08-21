@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
+import { NgModule, LOCALE_ID} from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +9,11 @@ import { UsuarioModule } from './modules/usuario/usuario.module';
 import { SampleModule } from './components/sample/sample.module';
 import { TweetModule } from './modules/tweet/tweet.module';
 import { ComentarioModule } from './modules/comentario/comentario.module';
+import { HttpClientModule, HTTP_INTERCEPTORS  } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { InterceptorService } from './shared/services/interceptor.service';
 
 @NgModule({
   declarations: [
@@ -23,9 +27,20 @@ import { ComentarioModule } from './modules/comentario/comentario.module';
     UsuarioModule,
     SampleModule,
     TweetModule,
-    ComentarioModule
+    ComentarioModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'pt' },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: InterceptorService,
+      multi: true
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

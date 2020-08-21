@@ -58,7 +58,19 @@
               <div class="like-comment mt-4">
                 <ul class="list-inline">
                   <li class="list-inline-item ml-2">
-                    <label class="m-0"><a href="javascript:void(0)"><i class="fa fa-comment"></i>&nbsp;&nbsp;Comentarios</a></label>
+                    <div class="card-body">
+                      <p>
+                        <button type="button" class="btn btn-outline-primary" (click)="isCollapsed1 = !isCollapsed1"
+                        [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">Comentarios</button>
+                      </p>
+                    </div>
+                    <div id="collapseExample" [ngbCollapse]="isCollapsed1">
+                      <div class="card mb-0">
+                        <div class="card-body">
+                          Aqui deve aparecer os comentarios
+                        </div>
+                      </div>
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -88,7 +100,19 @@
               <div class="like-comment mt-4">
                 <ul class="list-inline">
                   <li class="list-inline-item ml-2">
-                    <label class="m-0"><a href="javascript:void(0)"><i class="fa fa-comment"></i>&nbsp;&nbsp;Comentarios</a></label>
+                    <div class="card-body">
+                      <p>
+                        <button type="button" class="btn btn-outline-primary" (click)="isCollapsed2 = !isCollapsed2"
+                        [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">Comentarios</button>
+                      </p>
+                    </div>
+                    <div id="collapseExample" [ngbCollapse]="isCollapsed2">
+                      <div class="card mb-0">
+                        <div class="card-body">
+                          Aqui deve aparecer os comentarios
+                        </div>
+                      </div>
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -119,16 +143,16 @@
                 <ul class="list-inline">
                   <li class="list-inline-item ml-2">
                     <!--<label class="m-0"><a href="javascript:void(0)"><i class="fa fa-comment"></i>&nbsp;&nbsp;Comentarios</a></label>-->
-                    <div _ngcontent-sup-c7="" class="card-body">
+                    <div class="card-body">
                       <p>
-                        <button type="button" class="btn btn-outline-primary" (click)="isCollapsed = !isCollapsed"
-                        [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">Toggle</button>
+                        <button type="button" class="btn btn-outline-primary" (click)="isCollapsed3 = !isCollapsed3"
+                        [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">Comentarios</button>
                       </p>
                     </div>
-                    <div id="collapseExample" >
+                    <div id="collapseExample" [ngbCollapse]="isCollapsed3">
                       <div class="card mb-0">
                         <div class="card-body">
-                          You can collapse this card by clicking Toggle
+                          Aqui deve aparecer os comentarios
                         </div>
                       </div>
                     </div>  
